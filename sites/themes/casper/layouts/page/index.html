@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, ">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="自动化营销,营销自动化 ,邮件营销,短信营销,自动化邮件,精准营销,个性化营销,SMS营销,EMS营销,Xrewin"/> 
+    <meta name="description" content="Xrewin全国领先自动化营销提供商,为您提供营销自动化平台、专业的EDM营销、短信营销等服务，是自动化营销，电子邮件营销,短信营销提供商，助力企业节约成本、高速增长。"/> 
+    <title>易回眸-营销自动化平台-短信营销-邮件营销 Xrewin.com</title>
+    
+    {{ partial "y-head.html" . }}
+    <script type="text/javascript" src=" /js/jquery.min.js"></script>
+    <script>
+   var homeBlockShow = function(el,anima){
+            return function(){
+                if(el && el.length >0){
+                    el.animate(anima,300,homeBlockShow(el.next(),anima));
+                }
+            }
+        }
+    $(window).load(function () {
+        $('body').fadeIn(500);
+        
+        var blockMove = $('.blockmove');
+        var t = window.screen.height*window.devicePixelRatio ;
+// console.log(t,window.devicePixelRatio)
+        var bannerText = $('.y-banner .content .textAuto');
+        var bannerModel = $('.y-banner .content .models');
+        // console.log($(window).height())
+        var textTop = (t-bannerText.height())/2-70;
+        var modelTop = (t-bannerModel.height())/2-90;
+        bannerText.css('paddingTop',textTop+'px');
+        bannerModel.css('paddingTop',modelTop+'px'); 
+        if(ismobile()) {
+            var textTop = (t-bannerText.height())/2-70;
+            var modelTop = (t-bannerModel.height())/2-90;
+            // console.log(textTop,modelTop);
+            bannerText.css('paddingTop',textTop+'px');
+            bannerModel.css('paddingTop',modelTop+'px'); 
+            if(1100<t&&t<2000){
+                homeBlockShow(blockMove.eq(0),{opacity:"1",marginTop:-0.87*t+"px"})();
+          
+            }else if(t>2400){
+                homeBlockShow(blockMove.eq(0),{opacity:"1",marginTop:-0.9*t+"px"})();
+            
+            }else{
+                homeBlockShow(blockMove.eq(0),{opacity:"1",marginTop:-0.8*t+"px"})();
+            }
+            // else{
+            //     homeBlockShow(blockMove.eq(0),{opacity:"1",marginTop:0+"px"})();
+            // }
+        }else {
+            var textTop = (window.screen.height-bannerText.height())/2-70;
+            var modelTop = (window.screen.height-bannerModel.height())/2-90;
+            // console.log(textTop,modelTop);
+            bannerText.css('paddingTop',textTop+'px');
+            bannerModel.css('paddingTop',modelTop+'px'); 
+            // homeBlockShow(blockMove.eq(0),{opacity:"1",marginTop:0+"px"})();
+        }   
+        // if(1100<t&&t<2000){
+        //     homeBlockShow(blockMove.eq(0),{opacity:"1",marginTop:-0.9*t+"px"})();
+          
+        // }else if(t>2400){
+        //     homeBlockShow(blockMove.eq(0),{opacity:"1",marginTop:-0.85*t+"px"})();
+           
+        // }else{
+        //     homeBlockShow(blockMove.eq(0),{opacity:"1",marginTop:0+"px"})();
+        // }
+
+        
+    })
+
+    function ismobile() {
+    var mobileArry = ["iPhone", "iPad", "Android", "Windows Phone", "BB10; Touch", "BB10; Touch", "PlayBook", "Nokia"];
+    var ua = navigator.userAgent;
+    var res=mobileArry.filter(function(arr) {
+        return ua.indexOf(arr) > 0;
+    });
+    return res.length > 0;
+    }
+    // console.log(ismobile());
+
+    
+    </script>
+
+</head>
+<body style="display: none;">
+        {{ partial "y-header.html" . }}
+        {{ partial "y-banner.html" . }}
+        {{ partial "footer.html" . }}
+        {{ partial "menu.html" . }}
+
+         
+        
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- {{ partial "header.html" . }}
+
+{{if .Site.Params.cover}}
+{{if or (eq (substr .Site.Params.cover 0 7) "http://") (eq (substr .Site.Params.cover 0 8) "https://")}}
+  <header class="main-header" style="background-image: url({{.Site.Params.cover}})">
+  {{ else }}
+  <header class="main-header" style="background-image: url({{.Site.Params.cover | relURL}})">
+  {{ end }}
+{{else}}
+<header class="main-header no-cover">
+{{end}}
+
+    <nav class="main-nav overlay clearfix">
+        {{ if .Site.Params.logo }}
+            <a class="blog-logo" href="{{ .Permalink }}"><img src="{{ .Site.Params.logo  | relURL}}" alt="Blog Logo" /></a>
+        {{end}}
+        {{ if .Site.Menus.main }}
+            <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+        {{else}}
+            {{ if .Site.Params.RSSLink}}
+              <a class="menu-button icon-feed" href="{{.Site.Params.RSSLink }}">&nbsp;&nbsp;Subscribe</a>
+            {{else}}
+              <a class="menu-button icon-feed" href="{{ .RSSLink }}">&nbsp;&nbsp;Subscribe</a>
+            {{end}}
+        {{end}}
+    </nav>
+    <div class="vertical">
+        <div class="main-header-content inner">
+            {{ partial "social.html" . }}
+            <h1 class="page-title">{{ .Site.Title }}</h1>
+            <h2 class="page-description">{{ .Site.Params.description }}</h2>
+        </div>
+    </div>
+    <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
+</header>
+
+
+<main id="content" class="content" role="main">
+
+{{ partial "home-content.html" . }}
+
+</main>
+
+{{ partial "footer.html" . }} -->

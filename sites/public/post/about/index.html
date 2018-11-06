@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="自动化营销,营销自动化 ,邮件营销,短信营销,自动化邮件,精准营销,个性化营销,SMS营销,EMS营销,Xrewin"/> 
+    <meta name="description" content="Xrewin全国领先自动化营销提供商,为您提供营销自动化平台、专业的EDM营销、短信营销等服务，是自动化营销，电子邮件营销,短信营销提供商，助力企业节约成本、高速增长。"/> 
+    <title>易回眸-营销自动化平台-短信营销-邮件营销 Xrewin.com</title>
+    <link rel="stylesheet" type="text/css" href="/css/y-style.css" />
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+
+<link rel="icon" href="/images/logo.ico" type="image/x-icon"/>
+</head>
+<body>
+        <header class="y-header ">
+    <div class="b-center">
+        <h1 class="header_logo">
+            <a href="/">
+                <img src="/images/logo.png" />
+            </a>
+        </h1>
+        <nav>
+            <ul class="sf-menu" id="example">
+                <li class="nav_item current" mark="automation">
+                    <a href="/automation" class="scope introduction">营销自动化</a>
+                    <span class="line"></span>
+                    <div class="nav_sub">
+                        <a href="/automation#autoFunction">智能分组</a>
+                        <div class="stand"></div>
+                        <a href="/automation#Personal">个性化</a>
+                        <div class="stand"></div>
+                        <a href="/automation#Flow">工作流</a>
+                        <div class="stand"></div>
+                        <a href="/automation#Report">智能报表</a>
+                        <div class="stand"></div>
+                        <a href="/automation#Smart">Web埋点</a>
+                        <div class="stand"></div>
+                        <a href="/automation#Marketing">营销互动</a>
+                    </div>
+                </li>
+                <li class="nav_item current" mark="email">
+                    <a href="/email" class="scope show">邮件营销</a>
+                    <span class="line"></span>
+                </li>
+
+                <li class="nav_item current" mark="note">
+                    <a href="/note" class="scope">短信营销</a>
+                    <span class="line"></span>
+                </li>
+                <li class="nav_item current" mark="about" mark="example">
+                    <a href="/about" class="scope">探索发现</a>
+                    <span class="line"></span>
+                    <div class="nav_sub">
+                        <a href="/about/example">成功案例</a>
+                        <div class="stand"></div>
+                        <a href="/about/form">产品演示</a>
+                        <div class="stand"></div>
+                        <a href="/about/coming-soon">技术支持</a>
+                        <div class="stand"></div>
+                        <a href="/about">关于我们</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="tip" id="tip">
+            <div class="login">
+                <a class="scope" href="https://ma.xrewin.com/login">登录</a>
+            </div>
+            <div class="consult">
+                <a class="scope" href="/about/form">方案咨询</a>
+            </div>
+            <div class="phone">
+                <a class="scope" href="/about/form">
+                    <img src="/images/电话.png" /> 010-64429975
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <!doctype html>
+    <html lang="en">
+    <head>
+    <title>Using turn.js and the new zoom feature</title>
+    
+    <meta name="viewport" content="width = 1050, user-scalable = no" />
+    
+    <link href="/css/magazine.css" rel="stylesheet" type="text/css">
+    
+    
+    <script type="text/javascript" src="/js/jquery.min.1.7.js"></script>
+    
+    <script type="text/javascript" src="/js/modernizr.2.5.3.min.js"></script>
+    
+    <script type="text/javascript" src="/js/hash.js"></script>
+    
+    <script type="text/javascript" src="/js/turn.js"></script>
+    
+    <script type="text/javascript" src="/js/turn.html4.min.js"></script>
+    
+    <script type="text/javascript" src="/js/zoom.min.js"></script>
+    
+    <script type="text/javascript" src="/js/magazine.js"></script>
+
+    
+    
+    <script>
+    
+    $(function(){
+    
+    var next_button = $(".next-button");              
+    
+    var previous_button = $(".previous-button");
+    
+    setArrows();
+    
+    });
+    </script>
+    </head>
+    <body>
+        <div class="y-banner">
+            <div class="content">
+                <div class="top"></div>
+                <div class="aboutContent" style="height: 100%;overflow-y: hidden;position: relative;">
+                    <div id="canvas" >
+                        <div class="magazine-viewport">
+                            <div class="container">
+                                <div class="magazine">
+                                    </div>
+                            </div>
+                            <div ignore="1" class="next-button">
+                            </div>
+                            
+                            <div ignore="1" class="previous-button">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom"></div>
+            </div>
+          
+        </div>
+        <script type="text/javascript">
+    
+    function loadApp() {
+    
+         $('#canvas').fadeIn(1000);
+    
+         var flipbook = $('.magazine');
+    
+         
+    
+        if (flipbook.width()==0 || flipbook.height()==0) {
+    
+            setTimeout(loadApp, 10);
+    
+            return;
+    
+        }	
+
+
+    var os = function() {
+        var ua = navigator.userAgent,
+        isWindowsPhone = /(?:Windows Phone)/.test(ua),
+        isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone, 
+        isAndroid = /(?:Android)/.test(ua), 
+        isFireFox = /(?:Firefox)/.test(ua), 
+        isChrome = /(?:Chrome|CriOS)/.test(ua),
+        isTablet = /(?:iPad|PlayBook)/.test(ua) || (isAndroid && !/(?:Mobile)/.test(ua)) || (isFireFox && /(?:Tablet)/.test(ua)),
+        isPhone = /(?:iPhone)/.test(ua) && !isTablet,
+        isPc = !isPhone && !isAndroid && !isSymbian;
+        return {
+            isTablet: isTablet,
+            isPhone: isPhone,
+            isAndroid : isAndroid,
+            isPc : isPc
+        };
+    }();
+
+ 
+    
+    
+    var bookWidth = 0;
+    var bookHeight = 0;
+    var bookTop = 0;
+    if($(window).width()>1500){
+        bookWidth = 1000;
+         bookHeight = 618;
+    }else if($(window).width()>1366){
+        bookWidth = 850;
+        bookHeight = 550;
+    }else{
+        bookWidth = 750;
+        bookHeight = 500;
+    }
+
+
+    if(os.isAndroid || os.isPhone){
+        bookWidth = 1050;
+        bookHeight = 700;
+    }
+
+        flipbook.turn({			
+    
+                width:  bookWidth,
+    
+                  height: bookHeight,
+    
+                duration: 1000,   
+    
+                
+    
+                acceleration: !isChrome(),
+    
+                
+    
+                gradients: true,			
+    
+                
+    
+                autoCenter: true,
+    
+                
+    
+                elevation: 50,
+    
+                
+    
+                pages: 8,
+    
+                
+    
+                when: {
+    
+                    turning: function(event, page, view) {					
+    
+                        var book = $(this),
+    
+                        currentPage = book.turn('page'),
+    
+                        pages = book.turn('pages');			
+    
+                        
+    
+                        Hash.go('page/' + page).update();
+    
+                        
+    
+                        disableControls(page); 				
+    
+                    },
+    
+                    turned: function(event, page, view) {
+    
+                        disableControls(page);
+    
+                        $(this).turn('center');
+    
+                        if (page==1) { 
+    
+                            $(this).turn('peel', 'br');
+    
+                        }
+    
+                    },
+    
+                    missing: function (event, pages) {
+    
+                        
+    
+                        for (var i = 0; i < pages.length; i++)
+    
+                            addPage(pages[i], $(this));
+    
+                    }
+    
+                }
+    
+        });
+    
+
+        
+    
+        $('.magazine-viewport').zoom({
+    
+            flipbook: $('.magazine'),
+    
+            max: function() { 			
+    
+                
+    
+            }, 
+    
+            when: {
+    
+                swipeLeft: function() {
+    
+                    $(this).zoom('flipbook').turn('next');
+    
+                },
+    
+                swipeRight: function() {				
+    
+                    $(this).zoom('flipbook').turn('previous');
+    
+                },
+    
+    
+    
+                resize: function(event, scale, page, pageElement) {
+    
+                    if (scale==1)
+    
+                        loadSmallPage(page, pageElement);
+    
+                    else
+    
+                        loadLargePage(page, pageElement);
+    
+                },
+    
+                zoomIn: function () {
+    
+                    $('.made').hide();
+    
+                    $('.magazine').removeClass('animated').addClass('zoom-in');
+    
+                    $('.zoom-icon').removeClass('zoom-icon-in').addClass('zoom-icon-out');				
+    
+                    if (!window.escTip && !$.isTouch) {
+    
+                        escTip = true;
+    
+                        $('<div />', {'class': 'exit-message'}).
+    
+                            html('<div>Press ESC to exit</div>').
+    
+                                appendTo($('body')).
+    
+                                delay(2000).
+    
+                                animate({opacity:0}, 500, function() {
+    
+                                    $(this).remove();
+    
+                                });
+    
+                    }
+    
+                },
+    
+                zoomOut: function () {
+    
+                    $('.exit-message').hide();
+    
+                    $('.thumbnails').fadeIn();
+    
+                    $('.made').fadeIn();
+    
+                    $('.zoom-icon').removeClass('zoom-icon-out').addClass('zoom-icon-in');
+    
+                    setTimeout(function(){
+    
+                        $('.magazine').addClass('animated').removeClass('zoom-in');
+    
+                        resizeViewport();
+    
+                    }, 0);
+    
+                }
+    
+            }
+    
+        });
+    
+    
+    
+        
+    
+        if ($.isTouch)
+    
+            $('.magazine-viewport').bind('zoom.doubleTap', zoomTo);
+    
+        else
+    
+            $('.magazine-viewport').bind('zoom.tap', zoomTo);
+    
+        
+    
+        $(document).keydown(function(e){
+    
+            var previous = 37, next = 39, esc = 27;
+    
+            switch (e.keyCode) {
+    
+                case previous:
+    
+                    
+    
+                    $('.magazine').turn('previous');
+    
+                    e.preventDefault();
+    
+                break;
+    
+                case next:
+    
+                    
+    
+                    $('.magazine').turn('next');
+    
+                    e.preventDefault();
+    
+                break;
+    
+                case esc:				
+    
+                    $('.magazine-viewport').zoom('zoomOut');	
+    
+                    e.preventDefault();
+    
+                break;
+    
+            }
+    
+        });
+    
+    
+    
+        
+    
+        Hash.on('^page\/([0-9]*)$', {
+    
+            yep: function(path, parts) {
+    
+                var page = parts[1];
+    
+                if (page!==undefined) {
+    
+                    if ($('.magazine').turn('is'))
+    
+                        $('.magazine').turn('page', page);
+    
+                }
+    
+            },
+    
+            nop: function(path) {
+    
+                if ($('.magazine').turn('is'))
+    
+                    $('.magazine').turn('page', 1);
+    
+            }
+    
+        });
+    
+        $(window).resize(function() {
+    
+            resizeViewport();
+    
+    
+        }).bind('orientationchange', function() {
+    
+            resizeViewport();
+
+    
+        });
+    
+        
+    
+        
+    
+        $('.thumbnails').click(function(event) {		
+    
+            var page;
+    
+            if (event.target && (page=/page-([0-9]+)/.exec($(event.target).attr('class'))) ) {		
+    
+                $('.magazine').turn('page', page[1]);
+    
+            }
+    
+        });
+    
+        $('.thumbnails li').
+    
+            bind($.mouseEvents.over, function() {			
+    
+                $(this).addClass('thumb-hover');
+    
+    
+    
+            }).bind($.mouseEvents.out, function() {
+    
+                
+    
+                $(this).removeClass('thumb-hover');
+    
+    
+    
+            });
+    
+    
+    
+        if ($.isTouch) {	
+    
+            $('.thumbnails').
+    
+                addClass('thumbanils-touch').
+    
+                bind($.mouseEvents.move, function(event) {
+    
+                    event.preventDefault();
+    
+                });
+    
+        } else {
+    
+            $('.thumbnails ul').mouseover(function() {
+    
+                $('.thumbnails').addClass('thumbnails-hover');
+    
+            }).mousedown(function() {
+    
+                return false;
+    
+            }).mouseout(function() {
+    
+                $('.thumbnails').removeClass('thumbnails-hover');
+    
+            });
+    
+        }
+    
+    
+    
+        
+    
+        if ($.isTouch) {
+    
+            $('.magazine').bind('touchstart', regionClick);
+    
+        } else {
+    
+            $('.magazine').click(regionClick);
+    
+        }
+    
+    
+    
+        
+    
+        $('.next-button').bind($.mouseEvents.over, function() {		
+    
+            $(this).addClass('next-button-hover');
+    
+        }).bind($.mouseEvents.out, function() {		
+    
+            $(this).removeClass('next-button-hover');
+    
+        }).bind($.mouseEvents.down, function() {		
+    
+            $(this).addClass('next-button-down');
+    
+        }).bind($.mouseEvents.up, function() {		
+    
+            $(this).removeClass('next-button-down');
+    
+        }).click(function() {
+    
+            $('.magazine').turn('next');
+    
+            setTimeout(function(){
+    
+            setArrows() ;
+    
+            },300);
+    
+        });
+    
+    
+    
+        
+    
+        $('.previous-button').bind($.mouseEvents.over, function() {		
+    
+            $(this).addClass('previous-button-hover');
+    
+        }).bind($.mouseEvents.out, function() {		
+    
+            $(this).removeClass('previous-button-hover');
+    
+        }).bind($.mouseEvents.down, function() {		
+    
+            $(this).addClass('previous-button-down');
+    
+        }).bind($.mouseEvents.up, function() {		
+    
+            $(this).removeClass('previous-button-down');
+    
+        }).click(function() {		
+    
+            $('.magazine').turn('previous');
+    
+            setTimeout(function(){
+    
+            setArrows() ;
+    
+            },300);
+    
+    
+    
+        });
+    
+        resizeViewport();
+    
+        $('.magazine').addClass('animated');
+    
+    }
+    
+    
+    
+    
+    
+     $('.zoom-icon').bind('mouseover', function() {  	
+    
+         if ($(this).hasClass('zoom-icon-in'))
+    
+             $(this).addClass('zoom-icon-in-hover');
+    
+         if ($(this).hasClass('zoom-icon-out'))
+    
+             $(this).addClass('zoom-icon-out-hover'); 
+    
+     }).bind('mouseout', function() {  	
+    
+          if ($(this).hasClass('zoom-icon-in'))
+    
+             $(this).removeClass('zoom-icon-in-hover'); 	
+    
+         if ($(this).hasClass('zoom-icon-out'))
+    
+             $(this).removeClass('zoom-icon-out-hover');
+    
+     }).bind('click', function() {
+    
+         if ($(this).hasClass('zoom-icon-in'))
+    
+             $('.magazine-viewport').zoom('zoomIn');
+    
+         else if ($(this).hasClass('zoom-icon-out'))	
+    
+            $('.magazine-viewport').zoom('zoomOut');
+    
+     });
+    
+     $('#canvas').hide();
+    
+    
+    
+    
+    
+    yepnope({
+    
+        test : Modernizr.csstransforms,
+    
+        yep: ['/js/turn.js'],
+    
+        nope: ['/js/turn.html4.min.js'],
+    
+        both: ['/js/zoom.min.js', '/js/magazine.js', '/css/magazine.css'],
+    
+        complete: loadApp
+    
+    });
+    
+
+        </script>
+    
+    </body>
+    </html>
+    </html>
+    </html>
+    </html>
+    </html>
+    
+    
+        
+
+        <footer class="y-footer clearfix">
+    <div class="content">
+        <div class="intro">
+            <ul>
+                <li>
+                    <p class="title">
+                        <a href="/automation">营销自动化</a>
+                    </p>
+                    <p>
+                        <a href="/automation#Group">智能分组</a>
+                    </p>
+                    <p>
+                        <a href="/automation#Personal">个性化</a>
+                    </p>
+                    <p>
+                        <a href="/automation#Flow">工作流</a>
+                    </p>
+                    <p>
+                        <a href="/automation#Report">智能报表</a>
+                    </p>
+                    <p>
+                        <a href="/automation#Smart">web埋点</a>
+                    </p>
+                    <p>
+                        <a href="/automation#Marketing">营销互动</a>
+                    </p>
+                </li>
+                <li>
+                    <p class="title">
+                        <a href="/email">邮件营销</a>
+                    </p>
+                    <p>
+                        <a href="/email#emailProduct">邮件产品</a>
+                    </p>
+                    <p>
+                        <a href="/email#emailInfo">服务质量</a>
+                    </p>
+                    <p>
+                        <a href="/email#emailSolution">解决方案</a>
+                    </p>
+                </li>
+                <li>
+                    <p class="title">
+                        <a href="/note">短信营销</a>
+                    </p>
+                    <p>
+                        <a href="/note#note_product">短信产品</a>
+                    </p>
+                    <p>
+                        <a href="/note#noteInfo">服务质量</a>
+                    </p>
+                    <p>
+                        <a href="/note#note_solution">解决方案</a>
+                    </p>
+                </li>
+                <li>
+                    <p class="title">
+                        <a href="/about">探索发现</a>
+                    </p>
+                    <p>
+                        <a href="/about/example">成功案例</a>
+                    </p>
+                    <p>
+                        <a href="/about/form">产品演示</a>
+                    </p>
+                    <p>
+                        <a href="/about/coming-soon">技术支持</a>
+                    </p>
+                    <p>
+                        <a href="/about">关于我们</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class=" footer_logo">
+            <a href="/">
+                <img src="/images/高光简图.png" />
+            </a>
+        </div>
+    </div>
+    <div class="text">
+        <p>
+            <span>版权所有</span>
+            <span>© </span>
+            <span>北京易回眸科技有限公司</span>
+            <span>&nbsp;&nbsp;</span>
+            <span>京ICP备16009175号-1</span>
+        </p>
+        <p>
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010102002282" target="_blank">
+                <img src="/images/cockade.png" />
+                <span>京公网安备11010102002282</span>
+            </a>
+
+        </p>
+    </div>
+</footer>
+<script type="text/javascript" src=" /js/jquery.min.js"></script>
+<script type="text/javascript" src=" /js/bootstrap.min.js"></script>
+<script src="/js/jquery.scrollify.js"></script>
+<script type="text/javascript" src=" /js/y-index.js"></script>
+        
+</body>
+</html>
+
+
+
+
+

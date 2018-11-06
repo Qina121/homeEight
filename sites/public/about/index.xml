@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on My New Hugo Site</title>
+    <link>http://http://www.xrewin.com/about/</link>
+    <description>Recent content in Abouts on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://http://www.xrewin.com/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>http://http://www.xrewin.com/about/coming-soon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://http://www.xrewin.com/about/coming-soon/</guid>
+      <description>易回眸-营销自动化平台-短信营销-邮件营销 Xrewin.com{{ partial &#34;y-head.html&#34; . }}{{ partial &#34;y-header.html&#34; . }}{{ partial &#34;y-soon-banner.html&#34; . }}{{ partial &#34;footer.html&#34; . }}</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://http://www.xrewin.com/about/example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://http://www.xrewin.com/about/example/</guid>
+      <description>易回眸-营销自动化平台-短信营销-邮件营销 Xrewin.com{{ partial &#34;y-head.html&#34; . }}{{ partial &#34;y-header.html&#34; . }}{{ partial &#34;y-example.html&#34; . }}{{ partial &#34;footer.html&#34; . }}{{ partial &#34;menu.html&#34; . }}</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://http://www.xrewin.com/about/form/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://http://www.xrewin.com/about/form/</guid>
+      <description>易回眸-营销自动化平台-短信营销-邮件营销 Xrewin.com{{ partial &#34;y-head.html&#34; . }}{{ partial &#34;y-header.html&#34; . }}{{ partial &#34;y-form.html&#34; . }}{{ partial &#34;footer.html&#34; . }}{{ partial &#34;menu.html&#34; . }}</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://http://www.xrewin.com/about/try/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://http://www.xrewin.com/about/try/</guid>
+      <description>易回眸-营销自动化平台-短信营销-邮件营销 Xrewin.com{{ partial &#34;y-head.html&#34; . }}{{ partial &#34;y-header.html&#34; . }}{{ partial &#34;try.html&#34; . }}{{ partial &#34;footer.html&#34; . }}</description>
+    </item>
+    
+  </channel>
+</rss>
